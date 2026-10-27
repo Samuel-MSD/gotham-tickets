@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ingressos para a maratona da trilogia Batman.">
+  <title>Gotham Tickets | Trilogia Batman</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="topbar text-center py-2 small fw-semibold">Pré-venda aberta • Maratona da Trilogia Batman • A partir de R$ 39,90</div>
+
+  <header class="bg-dark sticky-top shadow-sm" id="inicio">
+    <nav class="navbar navbar-expand-lg navbar-dark container py-3" aria-label="Navegação principal">
+      <a class="navbar-brand brand-mark" href="#inicio">🦇 GOTHAM TICKETS</a>
+      <div class="d-flex align-items-center gap-2 order-lg-last">
+        <button class="btn btn-outline-warning btn-sm position-relative" type="button" id="cartButton" aria-label="Carrinho de ingressos">
+          🛒 <span class="badge text-bg-danger" id="cartCount">0</span>
+        </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse ms-lg-4" id="menuPrincipal">
+        <ul class="navbar-nav me-lg-3 mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#inicio">Início</a></li>
+          <li class="nav-item dropdown">
+            <button class="nav-link dropdown-toggle btn btn-link text-decoration-none" data-bs-toggle="dropdown" type="button" aria-expanded="false">Categorias</button>
+            <ul class="dropdown-menu">
+              <li><button class="dropdown-item filter-link" type="button" data-filter="todos">Todos</button></li>
+              <li><button class="dropdown-item filter-link" type="button" data-filter="begins">Batman Begins</button></li>
+              <li><button class="dropdown-item filter-link" type="button" data-filter="darkknight">The Dark Knight</button></li>
+              <li><button class="dropdown-item filter-link" type="button" data-filter="rises">The Dark Knight Rises</button></li>
+              <li><button class="dropdown-item filter-link" type="button" data-filter="combo">Combo Trilogia</button></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#destaques">Ingressos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#promocoes">Promoções</a></li>
+        </ul>
+        <form class="d-none d-lg-flex ms-auto gap-2 search-form" role="search">
+          <input class="form-control" type="search" placeholder="Buscar sessão ou ingresso..." aria-label="Buscar sessão ou ingresso">
+          <button class="btn btn-warning" type="submit">Buscar</button>
+        </form>
+      </div>
+    </nav>
+    <form class="d-lg-none container pb-3 search-form" role="search">
+      <div class="input-group">
+        <input class="form-control" type="search" placeholder="Buscar sessão ou ingresso..." aria-label="Buscar sessão ou ingresso">
+        <button class="btn btn-warning" type="submit">🔎</button>
+      </div>
+    </form>
+  </header>
+
+  <main>
+    <section class="container mt-3">
+      <div id="batmanCarousel" class="carousel slide rounded overflow-hidden shadow-sm" data-bs-ride="carousel" aria-label="Destaques da trilogia Batman">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#batmanCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#batmanCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#batmanCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="hero hero-begins">
+              <div class="hero-shade text-white p-4 p-md-5">
+                <div class="ms-md-4 hero-caption">
+                  <span class="badge text-bg-warning mb-2">Primeiro filme</span>
+                  <h1 class="fw-bold mb-2">Batman Begins</h1>
+                  <p class="mb-3">Garanta seu ingresso para o início da jornada de Bruce Wayne em Gotham.</p>
+                  <a href="#destaques" class="btn btn-warning fw-semibold">Ver ingressos</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="hero hero-darkknight">
+              <div class="hero-shade text-white p-4 p-md-5">
+                <div class="ms-md-4 hero-caption">
+                  <span class="badge text-bg-warning mb-2">Sessão mais procurada</span>
+                  <h2 class="fw-bold mb-2">The Dark Knight</h2>
+                  <p class="mb-3">Uma noite especial para quem quer reviver o confronto entre Batman e Coringa.</p>
+                  <a href="#destaques" class="btn btn-warning fw-semibold">Ver ingressos</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="hero hero-rises">
+              <div class="hero-shade text-white p-4 p-md-5">
+                <div class="ms-md-4 hero-caption">
+                  <span class="badge text-bg-warning mb-2">Encerramento</span>
+                  <h2 class="fw-bold mb-2">The Dark Knight Rises</h2>
+                  <p class="mb-3">Feche a maratona com o capítulo final da trilogia em grande estilo.</p>
+                  <a href="#destaques" class="btn btn-warning fw-semibold">Ver ingressos</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#batmanCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Anterior</span></button>
+        <button class="carousel-control-next" type="button" data-bs-target="#batmanCarousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Próximo</span></button>
+      </div>
+    </section>
+
+    <section class="container py-4" id="categorias">
+      <h2 class="h4 fw-bold mb-3">Categorias</h2>
+      <div class="row row-cols-3 row-cols-lg-6 g-2 g-md-3">
+        <div class="col"><button class="card category-card h-100 w-100 text-center p-2 p-md-3 border-0 shadow-sm filter-link" type="button" data-filter="todos"><span class="category-icon">🎟️</span><span class="small fw-semibold">Todos</span></button></div>
+        <div class="col"><button class="card category-card h-100 w-100 text-center p-2 p-md-3 border-0 shadow-sm filter-link" type="button" data-filter="begins"><span class="category-icon">🦇</span><span class="small fw-semibold">Begins</span></button></div>
+        <div class="col"><button class="card category-card h-100 w-100 text-center p-2 p-md-3 border-0 shadow-sm filter-link" type="button" data-filter="darkknight"><span class="category-icon">🌃</span><span class="small fw-semibold">Dark Knight</span></button></div>
+        <div class="col"><button class="card category-card h-100 w-100 text-center p-2 p-md-3 border-0 shadow-sm filter-link" type="button" data-filter="rises"><span class="category-icon">🔥</span><span class="small fw-semibold">Rises</span></button></div>
+        <div class="col"><button class="card category-card h-100 w-100 text-center p-2 p-md-3 border-0 shadow-sm filter-link" type="button" data-filter="combo"><span class="category-icon">🎬</span><span class="small fw-semibold">Combo</span></button></div>
+        <div class="col"><button class="card category-card h-100 w-100 text-center p-2 p-md-3 border-0 shadow-sm filter-link" type="button" data-filter="promocao"><span class="category-icon">🏷️</span><span class="small fw-semibold">Promoções</span></button></div>
+      </div>
+    </section>
+
+    <section class="container pb-4" id="destaques">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="h4 fw-bold mb-0">Ingressos em destaque</h2>
+        <button type="button" class="btn btn-link text-decoration-none filter-link" data-filter="todos">Ver todos</button>
+      </div>
+      <p class="text-secondary small" id="searchStatus" aria-live="polite">Escolha a sessão ideal ou feche logo o combo completo da trilogia.</p>
+      <div class="row g-3" id="productGrid">
+        <div class="col-12 col-md-6 col-lg-3 product-item" data-category="begins" data-promo="sim" data-name="batman begins ingresso sessão dublado legendado">
+          <article class="card product-card h-100 shadow-sm">
+            <img src="img/batman-begins.jpg" class="card-img-top product-photo" alt="Pôster do filme Batman Begins">
+            <div class="card-body d-flex flex-column">
+              <span class="badge text-bg-danger align-self-start mb-2">Promoção</span>
+              <h3 class="h5 card-title"><button type="button" class="btn btn-link text-dark text-start p-0 text-decoration-none fw-bold stretched-link product-link" data-bs-toggle="modal" data-bs-target="#ticketModal" data-title="Batman Begins" data-description="Entrada individual para a sessão de Batman Begins. Escolha uma das exibições do primeiro filme da trilogia." data-price="39,90">Batman Begins</button></h3>
+              <p class="small text-secondary mb-2">Sessão individual • 1 ingresso</p>
+              <div class="mt-auto">
+                <div class="small text-secondary"><s>R$ 59,90</s></div>
+                <p class="fw-bold fs-5 mb-2">R$ 39,90</p>
+                <button class="btn btn-warning w-100 position-relative z-2 add-cart" data-product="Batman Begins">Adicionar ao carrinho</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3 product-item" data-category="darkknight" data-promo="sim" data-name="the dark knight cavaleiro das trevas ingresso joker coringa">
+          <article class="card product-card h-100 shadow-sm">
+            <img src="img/the-dark-knight.jpg" class="card-img-top product-photo" alt="Pôster do filme The Dark Knight">
+            <div class="card-body d-flex flex-column">
+              <span class="badge text-bg-danger align-self-start mb-2">Promoção</span>
+              <h3 class="h5 card-title"><button type="button" class="btn btn-link text-dark text-start p-0 text-decoration-none fw-bold stretched-link product-link" data-bs-toggle="modal" data-bs-target="#ticketModal" data-title="The Dark Knight" data-description="Entrada individual para a sessão de The Dark Knight, o filme mais procurado da maratona." data-price="49,90">The Dark Knight</button></h3>
+              <p class="small text-secondary mb-2">Sessão premium • 1 ingresso</p>
+              <div class="mt-auto">
+                <div class="small text-secondary"><s>R$ 69,90</s></div>
+                <p class="fw-bold fs-5 mb-2">R$ 49,90</p>
+                <button class="btn btn-warning w-100 position-relative z-2 add-cart" data-product="The Dark Knight">Adicionar ao carrinho</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3 product-item" data-category="rises" data-promo="sim" data-name="the dark knight rises cavaleiro das trevas ressurge ingresso final">
+          <article class="card product-card h-100 shadow-sm">
+            <img src="img/the-dark-knight-rises.jpg" class="card-img-top product-photo" alt="Pôster do filme The Dark Knight Rises">
+            <div class="card-body d-flex flex-column">
+              <span class="badge text-bg-danger align-self-start mb-2">Promoção</span>
+              <h3 class="h5 card-title"><button type="button" class="btn btn-link text-dark text-start p-0 text-decoration-none fw-bold stretched-link product-link" data-bs-toggle="modal" data-bs-target="#ticketModal" data-title="The Dark Knight Rises" data-description="Entrada individual para o encerramento da maratona, com a sessão do último filme da trilogia." data-price="44,90">The Dark Knight Rises</button></h3>
+              <p class="small text-secondary mb-2">Sessão individual • 1 ingresso</p>
+              <div class="mt-auto">
+                <div class="small text-secondary"><s>R$ 54,90</s></div>
+                <p class="fw-bold fs-5 mb-2">R$ 44,90</p>
+                <button class="btn btn-warning w-100 position-relative z-2 add-cart" data-product="The Dark Knight Rises">Adicionar ao carrinho</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3 product-item" data-category="combo" data-promo="sim" data-name="combo trilogia maratona completa pacote batman begins dark knight rises">
+          <article class="card product-card h-100 shadow-sm">
+            <img src="img/trilogia-batman.webp" class="card-img-top product-photo" alt="Montagem com pôsteres da trilogia Batman">
+            <div class="card-body d-flex flex-column">
+              <span class="badge text-bg-danger align-self-start mb-2">Promoção</span>
+              <h3 class="h5 card-title"><button type="button" class="btn btn-link text-dark text-start p-0 text-decoration-none fw-bold stretched-link product-link" data-bs-toggle="modal" data-bs-target="#ticketModal" data-title="Combo Trilogia Batman" data-description="Pacote com acesso às três sessões: Batman Begins, The Dark Knight e The Dark Knight Rises." data-price="99,90">Combo Trilogia Batman</button></h3>
+              <p class="small text-secondary mb-2">3 filmes • maratona completa</p>
+              <div class="mt-auto">
+                <div class="small text-secondary"><s>R$ 129,90</s></div>
+                <p class="fw-bold fs-5 mb-2">R$ 99,90</p>
+                <button class="btn btn-warning w-100 position-relative z-2 add-cart" data-product="Combo Trilogia Batman">Adicionar ao carrinho</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <p class="small text-secondary mt-3 status-message" id="cartMessage" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="container pb-4" id="promocoes" aria-label="Promoções">
+      <div class="row g-3">
+        <div class="col-12 col-md-6">
+          <div class="promo-banner promo-trilogia rounded overflow-hidden">
+            <div class="banner-overlay text-white p-4 d-flex flex-column justify-content-center">
+              <h2 class="h4 fw-bold">Noite da Trilogia</h2>
+              <p class="mb-2">Leve o combo completo e garanta as três sessões em sequência.</p>
+              <a href="#destaques" class="btn btn-outline-warning align-self-start">Ver pacote</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="promo-banner promo-rises rounded overflow-hidden">
+            <div class="banner-overlay text-white p-4 d-flex flex-column justify-content-center">
+              <h2 class="h4 fw-bold">Sessão especial</h2>
+              <p class="mb-2">The Dark Knight Rises com preço promocional por tempo limitado.</p>
+              <button type="button" class="btn btn-outline-warning align-self-start filter-link" data-filter="promocao">Ver ofertas</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white border-top border-bottom py-4" aria-label="Benefícios">
+      <div class="container">
+        <div class="row g-3 text-center">
+          <div class="col-12 col-md-4"><div class="benefit-symbol">🎟️</div><div class="fw-semibold">Ingresso digital</div><div class="small text-secondary">Escolha o filme e reserve seu lugar</div></div>
+          <div class="col-12 col-md-4"><div class="benefit-symbol">⏰</div><div class="fw-semibold">Escolha sua sessão</div><div class="small text-secondary">Opções individuais ou maratona completa</div></div>
+          <div class="col-12 col-md-4"><div class="benefit-symbol">📱</div><div class="fw-semibold">Navegação prática</div><div class="small text-secondary">Consulte os ingressos pelo celular</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container py-5 text-center" id="newsletter">
+      <h2 class="h4 fw-bold">Receba novidades</h2>
+      <p class="text-secondary small">Avisos sobre novas sessões, combos e datas especiais.</p>
+      <form class="mx-auto newsletter-form" id="newsletterForm">
+        <div class="input-group">
+          <input class="form-control" type="email" id="newsletterEmail" placeholder="Seu e-mail" aria-label="Seu e-mail" required>
+          <button class="btn btn-warning fw-semibold" type="submit">Assinar</button>
+        </div>
+        <p class="small mt-2 status-message" id="newsletterMessage" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-md-3"><h2 class="h6 fw-bold">Gotham Tickets</h2><p class="text-white-50 small mb-0">Ingressos para sessões e maratonas da trilogia Batman.</p></div>
+        <div class="col-12 col-md-3"><h2 class="h6 fw-bold">Navegação</h2><a class="footer-link d-block small mb-1" href="#inicio">Início</a><a class="footer-link d-block small" href="#destaques">Ingressos</a></div>
+        <div class="col-12 col-md-3"><h2 class="h6 fw-bold">Categorias</h2><a class="footer-link d-block small mb-1" href="#categorias">Filmes</a><a class="footer-link d-block small" href="#promocoes">Promoções</a></div>
+        <div class="col-12 col-md-3"><h2 class="h6 fw-bold">Contato</h2><p class="small text-white-50 mb-0"><a class="footer-link" href="#newsletter">Receber novidades</a></p></div>
+      </div>
+      <hr class="border-secondary">
+      <p class="text-center small text-white-50 mb-0">© 2026 Gotham Tickets</p>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="ticketModal" tabindex="-1" aria-labelledby="ticketModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-dark text-white">
+          <h2 class="modal-title fs-5" id="ticketModalTitle">Detalhes do ingresso</h2>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <p id="ticketModalDescription"></p>
+          <p class="fw-bold mb-0" id="ticketModalPrice"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          <button type="button" class="btn btn-warning" id="modalAddCart">Adicionar ao carrinho</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+body {
+  background: #f3f4f7;
+  color: #111827;
+}
+
+.topbar {
+  background: #f3c64e;
+  color: #14181f;
+}
+
+.brand-mark {
+  color: #f3c64e;
+  letter-spacing: 1px;
+  font-weight: 800;
+}
+
+.hero,
+.hero-shade {
+  min-height: 340px;
+}
+
+.hero {
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-shade {
+  background: linear-gradient(90deg, rgba(9, 14, 23, 0.9), rgba(9, 14, 23, 0.25));
+  display: flex;
+  align-items: center;
+}
+
+.hero-caption {
+  max-width: 540px;
+}
+
+.hero-begins { background-image: url('../img/batman-begins.jpg'); }
+.hero-darkknight { background-image: url('../img/the-dark-knight.jpg'); }
+.hero-rises { background-image: url('../img/the-dark-knight-rises.jpg'); }
+
+.category-icon {
+  font-size: 2rem;
+}
+
+.category-card,
+.product-card {
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.category-card:hover,
+.product-card:hover {
+  transform: translateY(-4px);
+}
+
+.product-photo {
+  height: 310px;
+  object-fit: contain;
+  object-position: center;
+  background: #111722;
+}
+
+.product-card {
+  position: relative;
+}
+
+/* O link esticado abre o modal ao clicar na área livre do cartão.
+   O botão de carrinho permanece acima para funcionar separadamente. */
+.product-link {
+  position: static;
+  z-index: auto;
+}
+
+.promo-banner {
+  background-size: cover;
+  background-position: center;
+  min-height: 220px;
+}
+
+.promo-trilogia { background-image: url('../img/trilogia-batman.webp'); }
+.promo-rises { background-image: url('../img/the-dark-knight-rises.jpg'); }
+
+.banner-overlay {
+  background: rgba(9, 14, 23, 0.7);
+  min-height: 220px;
+}
+
+.benefit-symbol {
+  font-size: 1.7rem;
+}
+
+.footer-link {
+  color: #c8d0da;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+}
+
+.newsletter-form {
+  max-width: 560px;
+}
+
+.status-message {
+  min-height: 1.5rem;
+}
+
+@media (max-width: 575.98px) {
+  .hero,
+  .hero-shade {
+    min-height: 260px;
+  }
+
+  .hero h1,
+  .hero h2 {
+    font-size: 1.7rem;
+  }
+
+  .product-photo {
+    height: 360px;
+  }
+
+  .promo-banner,
+  .banner-overlay {
+    min-height: 190px;
+  }
+}
